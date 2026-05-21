@@ -1,0 +1,73 @@
+history
+history -a
+ls
+cd repogit/TP_AySO/
+cat <<EOF> script_dir.sh
+mkdir -p ~/TP1/{arquitectura/Clase{1..5},so/Clase{1..6}}
+EOF
+
+chmod +x script_dir.sh
+ls -l
+git add . 
+git commit -m "ADD:Añadiendo script"
+git push
+history -a
+cp ~/.bash_history ./Historial_comandos_OlmosTobias.txt
+cat Historial_comandos_OlmosTobias.txt 
+cat ~/.bash_history
+cat /tmp/.bash_history
+# A veces bash guarda una sesión temporal
+cat ~/.bash_history
+cat /tmp/.bash_history
+cd
+cd repogit
+git clone git@github.com:olmostobias2006-prog/TP_AYSOTOBIASO.git
+cd TP_AYSOTOBIASO/
+cat /etc/passwd
+man grep
+rep Ubunt
+grep UBUNTU /etc/passwd
+grep ubuntu /etc/passwd
+grep -i Ubuntu /etc/passwd
+grep -i ubuntu /etc/passwd | awk -F: '{print $2}' > datos_usuario.txt
+whoami
+echo "Usuario=$(whoami)" >> datos_usuario.txt
+cat datos_usuario.txt
+git add .
+git config --global user.email "olmostobias2006@gmail.com"
+git config --global user.name "olmostobias2006"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+grep "model name" /proc/cpuinfo | head -n1 > info_pc.txt
+cat info_pc.txt
+git add .
+git commit -m "feat: Añadiendo información de mi CPU"
+man grep
+man sort
+grep -v "nologin" /etc/passwd | head -n 10 | sort -k7
+grep -v "nologin" /etc/passwd | head -n 10 | sort -k7 > lista_ordenada
+git status
+git add .
+git commit -m "ADD: Listado de usuarios ordenada"
+cat <<EOF>> README.md
+Alumno:Tobias olmos
+Division:Cº116
+Turno:mañana
+EOF
+
+git add .
+git commit -m "feat: Agregando información del alumno al README"
+mkdir -p ~/TP1/arquitectura/{Clase1,Clase2,Clase3,Clase4,Clase5} ~/TP1/so/{Clase1,Clase2,Clase3,Clase4,Clase5,Clase6}
+ls -R ~/TP1
+cat << EOF > script_dir.sh
+mkdir -p ~/TP1/{arquitectura/Clase{1..5},so/Clase{1..6}}
+EOF
+
+chmod +x script_dir.sh
+ls -l
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
+cp ~/.bash_history ./Historial_comandos_OlmosTobias.txt
+history -a
